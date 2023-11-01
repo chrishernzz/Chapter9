@@ -61,7 +61,7 @@ void challenge1() {
 
 }
 //precondition: going to call my Patient class
-//postcondition: going to then call my mainMenuInformation function that will have all the information and the menus as well 
+//postcondition: going to then call my numberGuess function, going to use setters and getters to set/get the random number
 void challenge2() {
 	GuessNumber menu;
 	int min = 1, guessCount = 0;
