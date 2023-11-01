@@ -68,7 +68,7 @@ void challenge2() {
 	//to always change the random generator
 	srand(static_cast<unsigned int>(time(nullptr)));
 	//random number from 1-1000
-	menu.setRadnomNumber(rand() % 1000 + min);
+	menu.setRandomNumber(rand() % 1000 + min);
 	system("cls");
 	cout << "\t2> Guess your number between "<<min<<" to "<<menu.getRandomNumber()<<".\n\n";
 	cout << "\tThink of a number from " << min << " to "<<menu.getRandomNumber()<<".\n\n";

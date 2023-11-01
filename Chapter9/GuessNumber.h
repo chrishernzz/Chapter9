@@ -17,7 +17,7 @@ public:
 	//getters(accesors)
 	int getRandomNumber() const;
 	//setters(mutators)
-	void setRadnomNumber(int newRandomNumber);
+	void setRandomNumber(int newRandomNumber);
 
 	void numberGuess(int min, int max, int guessCount);
 

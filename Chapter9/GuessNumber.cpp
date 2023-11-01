@@ -11,7 +11,7 @@ int GuessNumber::getRandomNumber() const {
 }
 //precondition: going to get the new randomNumber
 //postcondition: going to set the private randomNumber with the new randomNumber member
-void GuessNumber::setRadnomNumber(int newRandomNumber) {
+void GuessNumber::setRandomNumber(int newRandomNumber) {
     randomNumber = newRandomNumber;
 }
 
