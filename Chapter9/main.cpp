@@ -60,7 +60,7 @@ void challenge1() {
 	menu.pattern(0,8);
 
 }
-//precondition: going to call my Patient class
+//precondition: going to call my GuessNumber class
 //postcondition: going to then call my numberGuess function, going to use setters and getters to set/get the random number
 void challenge2() {
 	GuessNumber menu;

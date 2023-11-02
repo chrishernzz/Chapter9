@@ -19,6 +19,7 @@ public:
 	//setters(mutators)
 	void setRandomNumber(int newRandomNumber);
 
+	//member function 
 	void numberGuess(int min, int max, int guessCount);
 
 };
