@@ -4,6 +4,8 @@
 //postcondition: going to then intialize the privates 
 Pattern::Pattern() :left(0), length(0) {}
 
+//precondition: going to get the new left and length 
+//postcondition: going to set the private left with the new left member and the private length with the new length member
 Pattern::Pattern(int newLeft, int newLength){
 	left = newLeft;
 	length = newLength;
