@@ -1,7 +1,7 @@
 #include "GuessNumber.h"
 
 //precondition: going to call the default constructor class
-//postcondition: going to then intialize the privates 
+//postcondition: going to then initialize the privates 
 GuessNumber::GuessNumber(): randomNumber(0){}
 
 //precondition: going to get the randomNumber 

@@ -1,13 +1,14 @@
 //Name: Christian Hernandez
-//Date: 11/6/2023
+//Date: 11/7/2023
 //subscription: CMPR131
 
-//Credit: Christian Hernandez,Bryan Alarcon,Thanh Tran, Joe Bryant,Erik Santana, Saul Merino, Otoniel Torres Bernal, and John Kim
+//Credit: Christian Hernandez,Bryan Alarcon,Thanh Tran, Joe Bryant,Erik Santana, Saul Merino
 
 #include<iostream>
 #include"input (1).h"
 #include"Pattern.h"
 #include"GuessNumber.h"
+#include"TowerHanoi.h"
 using namespace std;
 
 //prototype
@@ -16,7 +17,6 @@ void challenge1();
 void challenge2();
 void challenge3();
 void challenge4();
-
 
 int main()
 {
@@ -40,7 +40,7 @@ int menuOption() {
 	system("cls");
 	cout << "\n\tCMPR131 Chapter 9: Recursive Applications by Christian Hernandez(11/6/2023)";
 	cout << "\n\t" << string(100, char(205));
-	cout << "\n\t\t1> Pattern of astricks and blanks";
+	cout << "\n\t\t1> Pattern of asterisk and blanks";
 	cout << "\n\t\t2> Guess a number";
 	cout << "\n\t\t3> Solve Tower of Hanoi";
 	cout << "\n\t\t4> Solve n-Queens";
@@ -56,7 +56,7 @@ int menuOption() {
 void challenge1() {
 	Pattern menu;
 	system("cls");
-	cout << "\t1> Pattern of astricks and blanks\n\n";
+	cout << "\t1> Pattern of asterisk and blanks\n\n";
 	menu.pattern(0,8);
 
 }
@@ -75,10 +75,11 @@ void challenge2() {
 	system("pause");
 	menu.numberGuess(min, menu.getRandomNumber(), guessCount);
 }
-//precondition: going to call my Costco class
+//precondition: going to call my TowerHanoi class
 //postcondition: going to then call my mainMenuInformation function that will have all the information and the menus as well 
 void challenge3() {
-	
+	TowerHanoi menu;
+	menu.hanoiMenu();
 }
 //precondition: going to call my Costco class
 //postcondition: going to then call my mainMenuInformation function that will have all the information and the menus as well 

@@ -1,7 +1,7 @@
 #include "Pattern.h"
 
 //precondition: going to call the default constructor class
-//postcondition: going to then intialize the privates 
+//postcondition: going to then initialize the privates 
 Pattern::Pattern() :left(0), length(0) {}
 
 //precondition: going to get the new left and length 
@@ -11,8 +11,8 @@ Pattern::Pattern(int newLeft, int newLength){
 	length = newLength;
 }
 
-//precondition:
-//postcondtion:
+//precondition: going to have the parameters: int left(spaces) & int length(length of pattern)
+//postcondition: going to returns only when variable length == 0
 void Pattern::pattern(int left, int length){
 	if (length == 0) {
 		return;				// STOP or BASE case

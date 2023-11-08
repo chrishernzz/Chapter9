@@ -7,14 +7,16 @@ using namespace std;
 char inputChar(string prompt, string lookup);
 char inputChar(string prompt, char yes, char no);
 
+//precondition: going to create a GuessNumber that will use rand() as well
+//postcondition: going to pass in default constructor, getters and setters and one member function
 class GuessNumber{
 private:
 	int randomNumber;
 public:
-	//defualt constructor
+	//default constructor
 	GuessNumber();
 
-	//getters(accesors)
+	//getters(accessors)
 	int getRandomNumber() const;
 	//setters(mutators)
 	void setRandomNumber(int newRandomNumber);

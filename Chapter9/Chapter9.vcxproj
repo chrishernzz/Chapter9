@@ -130,11 +130,13 @@
     <ClCompile Include="GuessNumber.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pattern.cpp" />
+    <ClCompile Include="TowerHanoi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessNumber.h" />
     <ClInclude Include="input (1).h" />
     <ClInclude Include="Pattern.h" />
+    <ClInclude Include="TowerHanoi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
