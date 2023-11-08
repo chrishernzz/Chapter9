@@ -16,3 +16,4 @@ public:
 	void pattern(int left, int length);
 };
 
+

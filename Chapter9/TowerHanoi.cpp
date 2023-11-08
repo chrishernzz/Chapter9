@@ -240,9 +240,6 @@ void TowerHanoi::updatePegs(int turns){
 	moves++;
 	displayPegs();
 	updatePegs(turns - 1);
-
-
-
 }
 //Precondition: NA
 //Postcondition: initializes pegs

@@ -33,7 +33,7 @@ public:
 	int getFilled() const;
 
 	void placeFirstQueen();
-	void placeQueen(int numQueens, int row);
+	bool placeQueen(int column);
 	void displayBoard(stack<BoardSpaces> filledSpaces) const;
 
 

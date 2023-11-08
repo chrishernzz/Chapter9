@@ -1,5 +1,7 @@
 #include "n_Queens.h"
 
+//precondition: going to pass in three parameters
+//postcondition: going to then check if its true
 bool checkIfConflict(int boardSize, stack<BoardSpaces> filledSpaces, BoardSpaces currentSpace);
 
 //precondition: going to call the default constructor class
@@ -29,15 +31,17 @@ int n_Queens::getFilled() const{
 //precondition: going to create the main menu
 //postcondition: going to then get the input for the boardsize and the column as well
 void n_Queens::placeFirstQueen(){
-	//system("cls");
 	BoardSpaces currentSpace;
 	bool queenConflict = false;
 	boardSize = inputInteger("\tEnter a number(1..100) of queens: ", 1, 100);
 	int numQueens = 1;
 	int column;
 	column = inputInteger("\tEnter the column to place the first queen : ", 1, boardSize);
-	placeQueen(numQueens, column);
-	if (filledSpaces.size() != boardSize)
+	currentSpace.setColumn(column);
+	currentSpace.setRow(1);
+
+	bool completeBoard = false;
+	if (placeQueen(column) == false)
 	{
 		cout << "\tNo Solution Found";
 	}
@@ -45,36 +49,70 @@ void n_Queens::placeFirstQueen(){
 }
 //precondition: going to pass in two parameters, one for the number of queens and the other one for the column
 //postcondition: going to then use my setters to set the row and column and then do recursive
-void n_Queens::placeQueen(int numQueens, int column) {
+bool n_Queens::placeQueen(int column) {
 	//plan:
 	BoardSpaces currentSpace;
 	bool placed = false;
+	bool completeBoard = false;
 	currentSpace.setColumn(column);
-	currentSpace.setRow(numQueens);
-	bool conflict = checkIfConflict(boardSize, filledSpaces, currentSpace);
-	if (numQueens == boardSize && conflict == false) // checks if board is complete
+	currentSpace.setRow(filledSpaces.size() + 1);
+
+	if (filledSpaces.size() == boardSize) // checks if board is complete
 	{
-		filledSpaces.push(currentSpace);
-		displayBoard(filledSpaces);
-		return;
-	}
-	else if (conflict == false) // checks if no conflict
-	{
-		filledSpaces.push(currentSpace);
-		placeQueen(numQueens + 1, 1);
-	}
-	else if (conflict == true && column != boardSize) // checks if queen on current row is not on the last column
-	{
-		placeQueen(numQueens, column + 1);
-	}
-	else if (conflict == true && column == boardSize)
-	{
-		if (!filledSpaces.empty())
+		if (boardSize == 1)
 		{
-			filledSpaces.pop();
+			filledSpaces.push(currentSpace);
+			displayBoard(filledSpaces);
 		}
-		return;
+		return true;
 	}
+
+	for (int index = 1; index <= boardSize; index++)
+	{
+		if (filledSpaces.size() != 0)
+		{
+			currentSpace.setColumn(index);
+		}
+		if (filledSpaces.size() == 0 && index > 1 && currentSpace.getColumn() != boardSize)
+		{
+			currentSpace.setColumn(currentSpace.getColumn() + 1);
+		}
+
+		currentSpace.setRow(filledSpaces.size() + 1);
+		if (checkIfConflict(boardSize, filledSpaces, currentSpace) == false)
+		{
+			// push queen to board
+			filledSpaces.push(currentSpace);
+
+			if (filledSpaces.size() == boardSize)
+			{
+				displayBoard(filledSpaces);
+				return true;
+			}
+			else
+			{
+				column = 1;
+				// call the function again
+				filled = placeQueen(column);
+			}
+
+			if (filled == false)
+			{
+				if (currentSpace.getRow() == 1 && currentSpace.getColumn() == boardSize)
+				{
+					return false;
+				}
+				filledSpaces.pop();
+				// backtrack if needed
+			}
+
+		}
+	}
+	if (filledSpaces.size() == boardSize)
+	{
+		completeBoard = true;
+	}
+	return completeBoard;
 }
 //precondition: going to pass in a stack as a parameter
 //postcondition: going to then return the board when it is filled up
