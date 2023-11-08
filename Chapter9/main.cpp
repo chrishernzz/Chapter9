@@ -9,6 +9,7 @@
 #include"Pattern.h"
 #include"GuessNumber.h"
 #include"TowerHanoi.h"
+#include"n_Queens.h"
 using namespace std;
 
 //prototype
@@ -26,6 +27,7 @@ int main()
 		case 1: challenge1(); break;
 		case 2: challenge2(); break;
 		case 3: challenge3(); break;
+		case 4: challenge4(); break;
 		default: cout << "\t\tERROR - Invalid option. Please re-enter."; break;
 		}
 		cout << "\n";
@@ -51,8 +53,8 @@ int menuOption() {
 	return inputInteger("\n\t\tOption: ", 0, 4);
 }
 
-//precondition: 
-//postcondition: 
+//precondition: going to call my Pattern class
+//postcondition: going to then put 0 and 8 as the parameters for the function pattern()
 void challenge1() {
 	Pattern menu;
 	system("cls");
@@ -81,8 +83,9 @@ void challenge3() {
 	TowerHanoi menu;
 	menu.hanoiMenu();
 }
-//precondition: going to call my Costco class
+//precondition: going to call my n_Queens class
 //postcondition: going to then call my mainMenuInformation function that will have all the information and the menus as well 
 void challenge4() {
-
+	n_Queens menu;
+	menu.n_QueensMenu();
 }

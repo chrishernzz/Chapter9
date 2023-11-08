@@ -127,14 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoardSpaces.cpp" />
     <ClCompile Include="GuessNumber.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="n_Queens.cpp" />
     <ClCompile Include="Pattern.cpp" />
     <ClCompile Include="TowerHanoi.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoardSpaces.h" />
     <ClInclude Include="GuessNumber.h" />
     <ClInclude Include="input (1).h" />
+    <ClInclude Include="n_Queens.h" />
     <ClInclude Include="Pattern.h" />
     <ClInclude Include="TowerHanoi.h" />
   </ItemGroup>
