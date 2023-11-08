@@ -46,7 +46,7 @@ void TowerHanoi::hanoiMenu(){
 void TowerHanoi::updatePegs(int turns){
 	if (turns == 0)  //stop-case: stops when turns is equal to 0
 	{
-		return;
+		return; 
 	}
 
 	updatePegs(turns - 1);

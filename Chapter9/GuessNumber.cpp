@@ -32,7 +32,7 @@ void GuessNumber::numberGuess(int min, int max, int guessCount){
             //if statement that checks if the random is greater than the max or equal, if it is error, it cannot be
             if (randomNumber >= max) {
                 cout << "\n\tERROR: Guess is out of range!\n";
-                return;
+                return;                                          // STOP or BASE case
             }
             //recursive
             numberGuess(randomNumber + 1, max,guessCount);
@@ -41,14 +41,14 @@ void GuessNumber::numberGuess(int min, int max, int guessCount){
             //same thing here but now for the min
             if (randomNumber <= min) {
                 cout << "\n\tERROR: Guess is out of range!\n";
-                return;
+                return;                                         // STOP or BASE case
             }
             //recursive
             numberGuess(min, randomNumber - 1,guessCount);
         }
     }
     else{
-        cout << "\n\tNumber of guesses: " << guessCount<<"\n";
+        cout << "\n\tNumber of guesses: " << guessCount<<"\n"; // STOP or BASE case
     }
 
 }

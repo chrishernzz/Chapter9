@@ -43,7 +43,7 @@ void n_Queens::placeFirstQueen(){
 	bool completeBoard = false;
 	if (placeQueen(column) == false)
 	{
-		cout << "\tNo Solution Found";
+		cout << "\n\tNo Solution Found\n";
 	}
 
 }
@@ -100,7 +100,7 @@ bool n_Queens::placeQueen(int column) {
 			{
 				if (currentSpace.getRow() == 1 && currentSpace.getColumn() == boardSize)
 				{
-					return false;
+					return false;                 // STOP or BASE case
 				}
 				filledSpaces.pop();
 				// backtrack if needed
