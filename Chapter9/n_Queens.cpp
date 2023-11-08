@@ -26,9 +26,9 @@ int n_Queens::getBoardSize() const{
 int n_Queens::getFilled() const{
 	return filled;
 }
-
-void n_Queens::placeFirstQueen()
-{
+//precondition: going to create the main menu
+//postcondition: going to then get the input for the boardsize and the column as well
+void n_Queens::placeFirstQueen(){
 	//system("cls");
 	BoardSpaces currentSpace;
 	bool queenConflict = false;
@@ -43,10 +43,9 @@ void n_Queens::placeFirstQueen()
 	}
 
 }
-
-
-void n_Queens::placeQueen(int numQueens, int column) //something like this will be the main recursive function
-{
+//precondition: going to pass in two parameters, one for the number of queens and the other one for the column
+//postcondition: going to then use my setters to set the row and column and then do recursive
+void n_Queens::placeQueen(int numQueens, int column) {
 	//plan:
 	BoardSpaces currentSpace;
 	bool placed = false;
@@ -77,9 +76,9 @@ void n_Queens::placeQueen(int numQueens, int column) //something like this will 
 		return;
 	}
 }
-
-void n_Queens::displayBoard(stack<BoardSpaces> filledSpaces) const
-{
+//precondition: going to pass in a stack as a parameter
+//postcondition: going to then return the board when it is filled up
+void n_Queens::displayBoard(stack<BoardSpaces> filledSpaces) const{
 	cout << endl << "\t" << boardSize << "-Queens Solution." << endl;
 	cout << "\t" << std::string(1, char(201));
 	cout << string(boardSize * 2 + 1, char(205));
@@ -111,9 +110,9 @@ void n_Queens::displayBoard(stack<BoardSpaces> filledSpaces) const
 	cout << string(boardSize * 2 + 1, char(205));
 	cout << string(1, char(188)) << endl;
 }
-
-bool checkIfConflict(int boardSize, stack<BoardSpaces> filledSpaces, BoardSpaces currentSpace)
-{
+//precondition: going to pass in one stacks as the parameters
+//postcondition: going to then return a boolean checking if they are conflict, if not then keep looping through the loop
+bool checkIfConflict(int boardSize, stack<BoardSpaces> filledSpaces, BoardSpaces currentSpace){
 	if (filledSpaces.size() > 0)
 	{
 		if (abs(filledSpaces.top().getColumn() - currentSpace.getColumn()) <= 1)
@@ -143,7 +142,6 @@ bool checkIfConflict(int boardSize, stack<BoardSpaces> filledSpaces, BoardSpaces
 	}
 	return false;
 }
-
 //precondition: going to print the information
 //postcondition: going to create a menu that shows if the N-Queens board is filled
 void n_Queens::n_QueensMenu() {

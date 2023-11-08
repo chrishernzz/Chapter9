@@ -60,7 +60,6 @@ void challenge1() {
 	system("cls");
 	cout << "\t1> Pattern of asterisk and blanks\n\n";
 	menu.pattern(0,8);
-
 }
 //precondition: going to call my GuessNumber class
 //postcondition: going to then call my numberGuess function, going to use setters and getters to set/get the random number
