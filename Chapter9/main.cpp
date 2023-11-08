@@ -2,7 +2,7 @@
 //Date: 11/7/2023
 //subscription: CMPR131
 
-//Credit: Christian Hernandez,Bryan Alarcon,Thanh Tran, Joe Bryant,Erik Santana, Saul Merino
+//Credit: Christian Hernandez, Bryan Alarcon,Thanh Tran, Joe Bryant, Erik Santana, and Saul Merino
 
 #include<iostream>
 #include"input (1).h"
@@ -40,7 +40,7 @@ int main()
 //postcondition: it will return an int (the choice of the menu)
 int menuOption() {
 	system("cls");
-	cout << "\n\tCMPR131 Chapter 9: Recursive Applications by Christian Hernandez(11/6/2023)";
+	cout << "\n\tCMPR131 Chapter 9: Recursive Applications by Christian Hernandez(11/7/2023)";
 	cout << "\n\t" << string(100, char(205));
 	cout << "\n\t\t1> Pattern of asterisk and blanks";
 	cout << "\n\t\t2> Guess a number";

@@ -19,7 +19,7 @@ void TowerHanoi::hanoiMenu(){
 		system("cls");
 		moves = 1;
 
-		cout << "Tower of Hanoi (Recursive) by Joe Bryant\n";
+		cout << "Tower of Hanoi (Recursive)\n";
 		cout << string(100, char(196)) << endl << endl;
 
 		setSize(inputInteger("\tEnter the number of rings (1..64): ", 1, 64));
